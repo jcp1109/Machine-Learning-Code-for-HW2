@@ -217,7 +217,7 @@ X_train.shape, Y_train.shape, X_test.shape
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier
 
-# %%
+# Decision Tree Accuracy
 model = DecisionTreeClassifier()
 model.fit(X_train, Y_train)
 Y_pred = model.predict(X_test)
@@ -226,7 +226,7 @@ acc_decision_tree = round(model.score(X_train, Y_train) * 100, 2)
 acc_decision_tree
 
 
-# %%
+# Random Forest
 random_forest = RandomForestClassifier()
 random_forest.fit(X_train, Y_train)
 Y_pred = random_forest.predict(X_test)
