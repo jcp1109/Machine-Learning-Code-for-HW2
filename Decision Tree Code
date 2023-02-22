@@ -1,0 +1,9 @@
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.ensemble import RandomForestClassifier
+
+model = DecisionTreeClassifier()
+model.fit(X_train, Y_train)
+Y_pred = model.predict(X_test)
+
+acc_decision_tree = round(model.score(X_train, Y_train) * 100, 2)
+acc_decision_tree
